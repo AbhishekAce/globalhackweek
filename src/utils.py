@@ -1,0 +1,28 @@
+import panads as pd
+
+def load_standard_data(path: "data/students_performance_dataset.csv"):
+    df = pd.read_csv(path)
+    allowed_column=[
+        'Attendance',
+        'Midterm',
+        'final',
+        'Projects',
+        'Study_Hours'
+
+
+    ]
+    return df[allowed_column]
+
+def biased_data(path: "data/students_performance_dataset.csv"):
+    df = pd.read_csv(path)
+    biased_allowed_column=[
+        'Attendance',
+        'Midterm',
+        'final',
+        'Projects',
+        'Study_Hours'
+        'Gender',
+        'Parental_level_of_Education'
+        'Internet_Access'
+    ]
+    return df[biased_allowed_column]
